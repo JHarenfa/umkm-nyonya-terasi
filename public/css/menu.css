@@ -31,14 +31,8 @@ html::-webkit-scrollbar {
     height: 0;
 }
 
-#header {
+.container-fluid {
     width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-}
-
-.container {
-    padding: 50px 5%;
 }
 
 nav {
@@ -46,6 +40,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 40px 50px 0px 5%;
 }
 
 .logo {
@@ -59,7 +54,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: whitesmoke;
+    color: #121212;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -69,7 +64,7 @@ nav ul li a::after {
     content: "";
     width: 0;
     height: 3px;
-    background-color: #116606;
+    background-color: #800808;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -80,350 +75,34 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.textMid {
+.banner {
     width: 100%;
-    position: absolute;
-    display: flex;
-    padding: 9% 20%;
-    align-items: center;
-    justify-content: center;
-    color: whitesmoke;
-}
-
-.content {
-    width: 100%;
-    text-align: center;
-}
-
-.content h1 {
-    font-family: Croissant;
-    font-size: 120px;
-    font-weight: 600;
-    transition: 0.5s;
-}
-
-.content h1:hover {
-    -webkit-text-stroke: 2px whitesmoke;
-    color: whitesmoke;
-    color: transparent;
-}
-
-/* .content a {
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    font-size: 24px;
-    border: 2px solid white;
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
-  } */
-
-.background-img {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    opacity: 100%;
-    background-color: #262626;
-}
-
-/* About */
-
-#about {
-    padding: 0px 0;
-    color: whitesmoke;
-}
-
-.about-bg {
-    background-image: url("../images/background-about-tr.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.nav-btn {
-    color: whitesmoke;
-}
-.nav-btn::before,
-.nav-btn::after {
-    color: whitesmoke;
-}
-
-.swiper-pagination {
-    visibility: hidden;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1 {
-    flex-basis: 35%;
-}
-
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: rgba(250, 250, 250, 0.25) 0px 13px 27px -5px,
-        rgba(230, 230, 230, 0.3) 0px 8px 16px -8px;
-}
-.about-col-2 {
-    flex-basis: 60%;
-}
-
-.about-col-2 p {
-    padding-top: 20px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.about-col-2 h1 {
-    color: whitesmoke;
-    margin-top: 20%;
-}
-
-.subtitle {
-    font-size: 60px;
-    font-weight: 600;
-    color: #121212;
-    text-align: center;
-}
-
-.subtitle-desc {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
-    background-color: blue;
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
     position: relative;
 }
 
-.tab-links::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: #116606;
+.banner-img {
+    width: 100vw;
+}
+
+.banner-text {
     position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+    top: 55%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: #f5f5f5;
 }
 
-.tab-links.active-link::after {
-    width: 50%;
+.banner-text h1 {
+    font-size: 80px;
+    font-family: Croissant;
+    -webkit-text-stroke: #121212 2px;
 }
 
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span {
-    color: #e24530;
-    font-size: 14px;
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-
-/* Services */
-
-#services {
-    padding: 10px 0;
-}
-
-.services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.services-list div {
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: 0.5s, transform 0.5s;
-}
-
-.services-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-    color: whitesmoke;
-}
-
-.services-list div p {
-    color: whitesmoke;
-}
-
-.services-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: whitesmoke;
-}
-
-.services-list div a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover {
-    background-color: #116606;
-    transform: translateY(-10px);
-}
-
-/* portfolio */
-
-.img-size {
-    display: flex;
-    text-align: center;
-}
-.img-size img {
-    margin-top: 2%;
-    width: 80%;
-    height: 80%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.pic-desc {
-    font-size: 30px;
-    text-align: center;
-    padding-top: 20px;
-}
-/* Contact */
-
-.contact-bg {
-    background-image: url("../images/background-contact-tr.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.contact-subtitle {
-    text-align: justify;
-}
-
-.contact-left {
-    flex-basis: 35%;
-    color: whitesmoke;
-    align-self: center;
-    text-align: center;
-}
-
-.contact-left h1 {
-    color: whitesmoke;
-    font-size: 60px;
-    text-align: center;
-}
-.contact-right {
-    flex-basis: 60%;
-    text-align: center;
-}
-
-.contact-right iframe {
-    width: 600px;
-    height: 320px;
-}
-
-.contact-left p {
-    margin-top: 30px;
+.banner-text p {
+    padding-top: 5px;
     font-size: 20px;
 }
 
-.contact-left p i {
-    color: whitesmoke;
-    margin-right: 15px;
-    font-size: 25px;
-}
-
-.social-icons {
-    margin-top: 30px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: whitesmoke;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.social-icons a:hover {
-    color: #116606;
-    transform: translateY(-5px);
-}
-
-.btn.btn2 {
-    display: inline-block;
-    border: 1px solid whitesmoke;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: whitesmoke;
-}
-.btn2:hover {
-    background: white;
-    color: #121212;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: whitesmoke;
-    padding: 15px;
-    margin: 15px 0;
-    color: #121212;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background-color: #262626;
-    font-weight: 300;
-    color: whitesmoke;
-}
-
-/* CSS FOR SMALL SCREEN */
 nav .fa-xmark {
     display: none;
 }
@@ -431,33 +110,65 @@ nav .fa-ellipsis-vertical {
     display: none;
 }
 
-/* Preloader */
+@media only screen and (max-width: 1300px) {
+    .banner-text {
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: #f5f5f5;
+    }
+
+    .banner-text p {
+        padding-top: 5px;
+        font-size: 15px;
+    }
+
+    .banner-text h1 {
+        font-size: 60px;
+        font-family: Croissant;
+        -webkit-text-stroke: #121212 1px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .banner-text {
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: #f5f5f5;
+    }
+}
 
 @media only screen and (max-width: 950px) {
     .background-img {
         width: 100%;
         height: 100%;
     }
-    .content h1 {
-        margin-top: 50%;
-        font-size: 60px;
-        color: whitesmoke;
-        font-weight: 600;
-        transition: 0.5s;
+    .banner-text {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: #f5f5f5;
+    }
+    .banner-text h1 {
+        font-size: 30px;
+        font-family: Croissant;
+        -webkit-text-stroke: #121212 1px;
     }
     nav .fa-xmark {
         display: block;
         font-size: 25px;
-        color: #f5f5f5;
     }
     nav .fa-ellipsis-vertical {
         display: block;
         font-size: 25px;
-        color: #f5f5f5;
     }
 
     nav ul {
-        background-color: #262626;
+        background-color: #f5f5f5;
         position: fixed;
         top: 0;
         right: -200px;

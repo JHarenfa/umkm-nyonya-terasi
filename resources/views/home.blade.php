@@ -16,15 +16,15 @@
 
     <!-- Header -->
     <div id="header">
-      <img src="images/background-home-tr.png" alt="background-home" class="back-video">
+      <img src="images/background-home-tr.png" alt="background-home" class="background-img">
       <div class="container">
         <nav>
           <img src="images/logo.png" class="logo" />
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
-            <li><a href="#services">Menu</a></li>
+            <li><a href="#menu">Menu</a></li>
             <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#portfolio">Spesialitas</a></li>
+            <li><a href="#speciality">Spesialitas</a></li>
             <li><a href="#contact">Kontak</a></li>
             <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
           </ul>
@@ -39,7 +39,7 @@
       </div>
     </div>
     <!-- Menu -->
-    <div id="services">
+    <div id="menu">
       <div class="container container-img">
         <h1 class="subtitle">Ayo Cek Menu Kami!</h1>
         <p class="subtitle-desc">Disini tersedia menu makanan dan minuman yang kami sediakan</p>
@@ -48,25 +48,25 @@
             <i class="fa-solid fa-bowl-food fa-fade"></i>
             <h2>Makanan Berat</h2>
             <p>Tersedia makanan berat seperti Nasi Goreng, Mie, Kwetiau, Bihun, Ayam, Bebek, dan Seafood.</p>
-            <a href="#services">Cek Disini</a>
+            <a href="/makanan-berat">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-hotdog fa-fade"></i>
-            <h2>Makanan Ringan</h2>
+            <h2>Camilan</h2>
             <p>Tersedia menu camilan untuk disantap sembari menunggu hidangan utama.</p>
-            <a href="#services">Cek Disini</a>
+            <a href="/camilan">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-pepper-hot fa-fade"></i>
             <h2>Sambal</h2>
             <p>Tersedia sambal yang menyelerakan dan bikin nagih!</p>
-            <a href="#services">Cek Disini</a>
+            <a href="/sambal">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-mug-hot fa-fade"></i>
             <h2>Minuman</h2>
             <p>Tersedia berbagai jenis minuman untuk menemani hidangan-hidangan.</p>
-            <a href="#services">Cek Disini</a>
+            <a href="/minuman">Cek Disini</a>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
 
     <!-- Portfolio -->
 
-    <div id="portfolio">
+    <div id="speciality">
       <div class="container">
         <h1 class="subtitle">Menu Terbaik Kami!</h1>
         <p class="subtitle-desc">Tersedia beberapa menu khas Nyonya Terasi</p>
@@ -177,19 +177,6 @@
         document.getElementById(tabName).classList.add("active-tab");
       }
 
-      var tabLinksProject = document.getElementsByClassName("tab-links-project");
-      var tabContentsProject = document.getElementsByClassName("tab-contents-project");
-
-      function opentabProject(tabNameProject) {
-        for (tabLinkProject of tabLinksProject) {
-          tabLinkProject.classList.remove("active-link-project");
-        }
-        for (tabContentProject of tabContentsProject) {
-          tabContentProject.classList.remove("active-tab-project");
-        }
-        event.currentTarget.classList.add("active-link-project");
-        document.getElementById(tabNameProject).classList.add("active-tab-project");
-      }
     </script>
 
     <script>
@@ -247,22 +234,5 @@
       },
     });
   </script>
-    <!--<script>
-      var loader = document.getElementById("preloader");
-
-      window.addEventListener(
-        "load",
-        function (load) {
-          window.removeEventListener("load", load, false);
-          setTimeout(function () {
-            loader.classList.add("disappear");
-          }, 5000);
-        },
-        false
-      );
-    </script>-->
-
-
-
   </body>
 </html>
