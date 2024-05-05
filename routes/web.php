@@ -21,8 +21,8 @@ Route::get("/makanan-berat", function(){
     return view('makanan-berat');
 });
 
-Route::get("/camilan", function(){
-    return view('camilan');
+Route::get("/gorengan", function(){
+    return view('gorengan');
 });
 Route::get("/sambal", function(){
     return view('sambal');

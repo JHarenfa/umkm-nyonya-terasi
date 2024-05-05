@@ -18,7 +18,7 @@
             <ul id="sidemenu">
               <li><a href="/">Kembali</a></li>
               <li><a href="/makanan-berat">Makanan Berat</a></li>
-              <li><a href="/camilan">Camilan</a></li>
+              <li><a href="/gorengan">Gorengan</a></li>
               <li><a href="/sambal">Sambal</a></li>
               <li><a href="/minuman">Minuman</a></li>
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
@@ -26,11 +26,7 @@
             <i class="fa-solid fa-ellipsis-vertical" onclick="openMenu()"></i>
           </nav>
         <div class="banner">
-            <img src="images/banner-berat.png" class="banner-img">
-            <div class="banner-text">
-                <h1>Makanan Berat</h1>
-                <p>Hidangan utama di Nyonya Terasi.</p>
-            </div>
+            <img src="images/banner-minuman.png" class="banner-img">
         </div>
     </div>
 

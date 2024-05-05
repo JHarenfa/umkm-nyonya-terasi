@@ -52,14 +52,14 @@
           </div>
           <div>
             <i class="fa-solid fa-hotdog fa-fade"></i>
-            <h2>Camilan</h2>
-            <p>Tersedia menu camilan untuk disantap sembari menunggu hidangan utama.</p>
-            <a href="/camilan">Cek Disini</a>
+            <h2>Gorengan</h2>
+            <p>Tersedia menu gorengan yang menyelerakan dan tentunya enak!</p>
+            <a href="/gorengan">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-pepper-hot fa-fade"></i>
             <h2>Sambal</h2>
-            <p>Tersedia sambal yang menyelerakan dan bikin nagih!</p>
+            <p>Tersedia sambal yang mengundang untuk dinikmati dan bikin nagih!</p>
             <a href="/sambal">Cek Disini</a>
           </div>
           <div>
@@ -94,9 +94,7 @@
           <div class="about-col-2">
             <h1 class="subtitle">Apa Itu Nyonya Terasi?</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nostrum dolores quaerat doloribus, iure, quam molestiae ullam assumenda quia cupiditate 
-              rem asperiores dignissimos, at sapiente quos omnis? Eum laborum vel, magni, ipsa impedit sint ipsum nobis ut eveniet molestiae blanditiis repellat 
-              ratione, et aut cumque. Magnam minima ratione aspernatur magni.
+              Rumah Makan Nyonya Terasi adalah tempat yang menggabungkan kelezatan masakan Nusantara dengan nuansa yang nyaman dan ramah. Setiap hidangan, mulai dari ayam hingga ikan, sate, dan soto, disajikan dengan cita rasa autentik yang membuat lidah Anda terkagum-kagum. Namun, yang membuat tempat ini benar-benar istimewa adalah sambalnya yang begitu enak dan mengundang untuk dinikmati. Tersebar di beberapa lokasi di Batam seperti Nagoya, One Batam Mall, Batam Centre, dan Tiban, Nyonya Terasi adalah tempat yang sempurna untuk menikmati kelezatan masakan tradisional Indonesia.
             </p>
           </div>
         </div>
