@@ -2,6 +2,11 @@
     font-family: Croissant;
     src: url("../font/CroissantOne-Regular.ttf");
 }
+
+@font-face {
+    font-family: Mate;
+    src: url("../font/Mate-Regular.ttf");
+}
 * {
     margin: 0;
     padding: 0;
@@ -192,6 +197,7 @@ nav ul li a:hover::after {
     font-weight: 600;
     color: #121212;
     text-align: center;
+    font-family: Mate;
 }
 
 .subtitle-desc {
@@ -299,7 +305,7 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
-/* portfolio */
+/* Speciality */
 
 .img-size {
     display: flex;

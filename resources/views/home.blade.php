@@ -102,15 +102,23 @@
     </div>
 
 
-    <!-- Portfolio -->
+    <!-- Speciality -->
 
     <div id="speciality">
       <div class="container">
         <h1 class="subtitle">Menu Terbaik Kami!</h1>
-        <p class="subtitle-desc">Tersedia beberapa menu khas Nyonya Terasi</p>
+        <p class="subtitle-desc">Tersedia beberapa menu yang paling digemari di Nyonya Terasi</p>
 
         <div class="swiper mySwiper-speciality img-size">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/Ayam-Penyet.png" />
+              <p class="pic-desc">Ayam Goreng Sambel Terasi</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/Ayam-Kalasan.png" />
+              <p class="pic-desc">Ayam Kalasan</p>
+            </div>
             <div class="swiper-slide">
               <img src="images/Ayam-Bakar.jpg" />
               <p class="pic-desc">Ayam Bakar</p>
@@ -121,7 +129,7 @@
             </div>
             <div class="swiper-slide">
               <img src="images/Tahu-Petai.jpg" />
-              <p class="pic-desc">Tahu Petai</p>
+              <p class="pic-desc">Tahu Petai Udang Tauco</p>
             </div>
           <div class="swiper-slide">
             <img src="images/Nasi-Goreng-Nyonya-Terasi.jpg" />

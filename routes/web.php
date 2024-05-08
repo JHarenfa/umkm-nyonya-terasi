@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get("/makanan-berat", function(){
-    return view('makanan-berat');
+    return View::make('makanan-berat');
 });
 
 Route::get("/gorengan", function(){
