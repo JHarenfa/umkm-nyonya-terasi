@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::get("/makanan-berat", function(){
-    return View::make('makanan-berat');
+Route::get('/dashboard', function () {
+    return view('create');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get("/gorengan", function(){
-    return view('gorengan');
-});
-Route::get("/sambal", function(){
-    return view('sambal');
-});
-Route::get("/minuman", function(){
-    return view('minuman');
-});
+require __DIR__.'/auth.php';
+
+Route::resource('products', ProductController::class);  

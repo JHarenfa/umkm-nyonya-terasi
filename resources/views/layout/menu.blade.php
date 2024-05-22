@@ -24,10 +24,10 @@
             <img src="images/logo.png" class="logo" />
             <ul id="sidemenu">
               <li><a href="/">Kembali</a></li>
-              <li><a href="/makanan-berat">Makanan Berat</a></li>
-              <li><a href="/gorengan">Gorengan</a></li>
-              <li><a href="/sambal">Sambal</a></li>
-              <li><a href="/minuman">Minuman</a></li>
+              <li><a href="/umkm-nyonya-terasi/public/makanan-berat">Makanan Berat</a></li>
+              <li><a href="/umkm-nyonya-terasi/public/gorengan">Gorengan</a></li>
+              <li><a href="/umkm-nyonya-terasi/public/sambal">Sambal</a></li>
+              <li><a href="/umkm-nyonya-terasi/public/minuman">Minuman</a></li>
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
             <i class="fa-solid fa-ellipsis-vertical" onclick="openMenu()"></i>

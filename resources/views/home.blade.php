@@ -48,25 +48,25 @@
             <i class="fa-solid fa-bowl-food fa-fade"></i>
             <h2>Makanan Berat</h2>
             <p>Tersedia makanan berat seperti Nasi Goreng, Mie, Kwetiau, Bihun, Ayam, Bebek, dan Seafood.</p>
-            <a href="/makanan-berat">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/makanan-berat">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-hotdog fa-fade"></i>
             <h2>Gorengan</h2>
             <p>Tersedia menu gorengan yang menyelerakan dan tentunya enak!</p>
-            <a href="/gorengan">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/gorengan">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-pepper-hot fa-fade"></i>
             <h2>Sambal</h2>
             <p>Tersedia sambal yang mengundang untuk dinikmati dan bikin nagih!</p>
-            <a href="/sambal">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/sambal">Cek Disini</a>
           </div>
           <div>
             <i class="fa-solid fa-mug-hot fa-fade"></i>
             <h2>Minuman</h2>
             <p>Tersedia berbagai jenis minuman untuk menemani hidangan-hidangan.</p>
-            <a href="/minuman">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/minuman">Cek Disini</a>
           </div>
         </div>
       </div>
