@@ -15,13 +15,54 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Main Page*/
 Route::get('/', function () {
+    $products = DB::table('products')->get();
+    return view('home',[
+        'products'=>$products
+    ]);
+})->name('home');
+
+Route::get('/makanan-berat', function () {
+    $products = DB::table('products')->get();
+    return view('makanan-berat',[
+        'products'=>$products
+    ]);
+});
+Route::get('/gorengan', function () {
+    $products = DB::table('products')->get();
+    return view('gorengan',[
+        'products'=>$products
+    ]);
+});
+Route::get('/sambal', function () {
+    $products = DB::table('products')->get();
+    return view('sambal',[
+        'products'=>$products
+    ]);;
+});
+Route::get('/minuman', function () {
+    $products = DB::table('products')->get();
+    return view('minuman',[
+        'products'=>$products
+    ]);;
+});
+
+/* Dashboard */
+Route::get('/admin', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/create', function () {
     return view('create');
+})->middleware(['auth', 'verified'])->name('create');
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

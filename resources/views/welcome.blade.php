@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Nyonya Terasi</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -24,16 +24,16 @@
                 color: whitesmoke;
             }
             .content {
-    width: 100%;
-    text-align: center;
-}
+                width: 100%;
+                text-align: center;
+            }
 
-.content h1 {
-    font-family: Croissant;
-    font-size: 120px;
-    font-weight: 600;
-    transition: 0.5s;
-}
+            .content h1 {
+                font-family: Croissant;
+                font-size: clamp(50px, 7vw + 1rem, 200px);
+                font-weight: 600;
+                transition: 0.5s;
+            }
         </style>
     </head>
     <body class="antialiased">

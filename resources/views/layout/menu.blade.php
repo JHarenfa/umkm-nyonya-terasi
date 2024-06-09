@@ -7,6 +7,7 @@
         <title>{{config('app.name')}}</title>
         <link rel="icon" href="images/logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="<?php echo asset('css/menu.css')?>" type="text/css"> 
+        <script src="jquery-2.1.4.js"></script>
          <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/3000ffabee.js" crossorigin="anonymous"></script>
          <!-- Bootstrap -->
@@ -23,11 +24,11 @@
         <nav>
             <img src="images/logo.png" class="logo" />
             <ul id="sidemenu">
-              <li><a href="/">Kembali</a></li>
-              <li><a href="/umkm-nyonya-terasi/public/makanan-berat">Makanan Berat</a></li>
-              <li><a href="/umkm-nyonya-terasi/public/gorengan">Gorengan</a></li>
-              <li><a href="/umkm-nyonya-terasi/public/sambal">Sambal</a></li>
-              <li><a href="/umkm-nyonya-terasi/public/minuman">Minuman</a></li>
+              <li><a href="{{ route('home') }}">Kembali</a></li>
+              <li><a href="makanan-berat">Makanan Berat</a></li>
+              <li><a href="gorengan">Gorengan</a></li>
+              <li><a href="sambal">Sambal</a></li>
+              <li><a href="minuman">Minuman</a></li>
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
             <i class="fa-solid fa-ellipsis-vertical" onclick="openMenu()"></i>
@@ -42,34 +43,50 @@
     </div>
 
     <script>
-        var tabLinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
-  
-        function opentab(tabName) {
-          for (tabLink of tabLinks) {
-            tabLink.classList.remove("active-link");
-          }
-          for (tabContent of tabContents) {
-            tabContent.classList.remove("active-tab");
-          }
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(tabName).classList.add("active-tab");
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
         }
-  
-      </script>
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+
+    </script>
+
     <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openMenu() {
-          sidemenu.style.right = "0";
-        }
-        function closeMenu() {
-          sidemenu.style.right = "-200px";
-        }
-      </script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
       <script>
         var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
+          slidesPerView: 1,
           spaceBetween: 30,
+          breakpoints: {
+            360: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          },
           freeMode: true,
           pagination: {
             el: ".swiper-pagination",

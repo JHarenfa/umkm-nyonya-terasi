@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <!--<div id="preloader"></div>-->
 
     <!-- Header -->
     <div id="header">
@@ -45,32 +44,33 @@
         <p class="subtitle-desc">Disini tersedia menu makanan dan minuman yang kami sediakan</p>
         <div class="services-list">
           <div>
-            <i class="fa-solid fa-bowl-food fa-fade"></i>
-            <h2>Makanan Berat</h2>
-            <p>Tersedia makanan berat seperti Nasi Goreng, Mie, Kwetiau, Bihun, Ayam, Bebek, dan Seafood.</p>
-            <a href="/umkm-nyonya-terasi/public/makanan-berat">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/makanan-berat">
+              <i class="fa-solid fa-bowl-food fa-fade"></i>
+              <h2>Makanan Berat</h2>
+              <p>Tersedia makanan berat seperti Nasi Goreng, Mie, Kwetiau, Bihun, Ayam, Bebek, dan Seafood.</p></a>
           </div>
           <div>
-            <i class="fa-solid fa-hotdog fa-fade"></i>
-            <h2>Gorengan</h2>
-            <p>Tersedia menu gorengan yang menyelerakan dan tentunya enak!</p>
-            <a href="/umkm-nyonya-terasi/public/gorengan">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/gorengan">
+              <i class="fa-solid fa-hotdog fa-fade"></i>
+              <h2>Gorengan</h2>
+              <p>Tersedia menu gorengan yang menyelerakan dan tentunya enak!</p></a>
           </div>
           <div>
-            <i class="fa-solid fa-pepper-hot fa-fade"></i>
-            <h2>Sambal</h2>
-            <p>Tersedia sambal yang mengundang untuk dinikmati dan bikin nagih!</p>
-            <a href="/umkm-nyonya-terasi/public/sambal">Cek Disini</a>
+            <a href="/umkm-nyonya-terasi/public/sambal">
+              <i class="fa-solid fa-pepper-hot fa-fade"></i>
+              <h2>Sambal</h2>
+              <p>Tersedia sambal yang mengundang untuk dinikmati dan bikin nagih!</p></a>
           </div>
-          <div>
-            <i class="fa-solid fa-mug-hot fa-fade"></i>
-            <h2>Minuman</h2>
-            <p>Tersedia berbagai jenis minuman untuk menemani hidangan-hidangan.</p>
-            <a href="/umkm-nyonya-terasi/public/minuman">Cek Disini</a>
+          <div> 
+            <a href="/umkm-nyonya-terasi/public/minuman">
+              <i class="fa-solid fa-mug-hot fa-fade"></i>
+              <h2>Minuman</h2>
+              <p>Tersedia berbagai jenis minuman untuk menemani hidangan-hidangan.</p></a>
           </div>
         </div>
       </div>
     </div>
+    
     <!-- About -->
     <div id="about">
       <div class="container about-bg">
@@ -111,32 +111,16 @@
 
         <div class="swiper mySwiper-speciality img-size">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="images/Ayam-Penyet.png" />
-              <p class="pic-desc">Ayam Goreng Sambel Terasi</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/Ayam-Kalasan.png" />
-              <p class="pic-desc">Ayam Kalasan</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/Ayam-Bakar.jpg" />
-              <p class="pic-desc">Ayam Bakar</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/Sosis-Cabe-Ijo.jpg" />
-              <p class="pic-desc">Sosis Cabe Ijo</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="images/Tahu-Petai.jpg" />
-              <p class="pic-desc">Tahu Petai Udang Tauco</p>
-            </div>
-          <div class="swiper-slide">
-            <img src="images/Nasi-Goreng-Nyonya-Terasi.jpg" />
-            <p class="pic-desc">Nasi Goreng Nyonya Terasi</p>
+              @foreach ($products as $product)
+                @if ($product->isRecommended == true)
+                <div class="swiper-slide">
+                  <img src="{{ $product->image }}" alt="{{ $product->name }}"/>
+                  <p class="pic-desc">{{ $product->name }}</p>
+                </div>
+                @endif
+              @endforeach
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
         </div>
     </div>
 
@@ -164,9 +148,6 @@
       </div>
     </div>
 
-    <div class="loader-wrapper">
-      <span class="loader"><span class="loader-inner"></span></span>
-    </div>
 
     <script>
       var tabLinks = document.getElementsByClassName("tab-links");
@@ -194,19 +175,7 @@
         sidemenu.style.right = "-200px";
       }
     </script>
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycby5G2srJReFF2a8dSW9iFKEI0qH5jXoZP7CsPs_5tl-kC2zkDebiyK7e5kDt0Qu6iwywg/exec";
-      const form = document.forms["submit-to-google-sheet"];
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,

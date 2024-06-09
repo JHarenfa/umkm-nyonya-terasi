@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('detail');
+            $table->string('productType');
+            $table->string('image')->nullable();
+            $table->boolean('isRecommended')->default(0);
             $table->timestamps();
         });
     }
