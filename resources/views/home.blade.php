@@ -4,10 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyonya Terasi</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css"> 
+    <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/3000ffabee.js" crossorigin="anonymous"></script>
     <script src="jquery-2.1.4.js"></script>
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>

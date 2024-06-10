@@ -117,7 +117,7 @@ class ProductController extends Controller
             'detail' => $request->detail,
             'productType' => $request->productType,
             'image' => $path.$filename,
-            'isRecommended' => $request->has('isRecommended')
+            'isRecommended' => $request->has(key:'isRecommended')
         ]);
 
         //redirect user
