@@ -28,36 +28,34 @@ Route::get('/makanan-berat', function () {
     return view('makanan-berat',[
         'products'=>$products
     ]);
-});
+})->name('makanan-berat');
 Route::get('/gorengan', function () {
     $products = DB::table('products')->get();
     return view('gorengan',[
         'products'=>$products
     ]);
-});
+})->name('gorengan');
 Route::get('/sambal', function () {
     $products = DB::table('products')->get();
     return view('sambal',[
         'products'=>$products
     ]);;
-});
+})->name('sambal');
 Route::get('/minuman', function () {
     $products = DB::table('products')->get();
     return view('minuman',[
         'products'=>$products
     ]);;
-});
+})->name('minuman');
 
 /* Dashboard */
 Route::get('/admin', function () {
     return view('welcome');
-});
+})->name('admin');
 
 Route::get('/create', function () {
     return view('create');
 })->middleware(['auth', 'verified'])->name('create');
-
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

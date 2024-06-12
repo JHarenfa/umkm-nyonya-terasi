@@ -43,11 +43,11 @@ class ProductController extends Controller
         $path = NULL;
         $filename = NULL;
 
-        if($request->has('image')){
+        if ($request->has('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
 
-            $filename = time().'.'.$extension;
+            $filename = time() . '.' . $extension;
 
             $path = 'product-image/images/';
             $file->move($path, $filename);
@@ -58,7 +58,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'detail' => $request->detail,
             'productType' => $request->productType,
-            'image' => $path.$filename,
+            'image' => $path . $filename,
             'isRecommended' => $request->has('isRecommended')
         ]);
 
@@ -97,16 +97,16 @@ class ProductController extends Controller
 
         $path = NULL;
         $filename = NULL;
-        if($request->has('image')){
+        if ($request->has('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
 
-            $filename = time().'.'.$extension;
+            $filename = time() . '.' . $extension;
 
             $path = 'public/images/';
             $file->move($path, $filename);
 
-            if(File::exists($product->image)){
+            if (File::exists($product->image)) {
                 File::delete($product->image);
             }
         }
@@ -116,8 +116,8 @@ class ProductController extends Controller
             'name' => $request->name,
             'detail' => $request->detail,
             'productType' => $request->productType,
-            'image' => $path.$filename,
-            'isRecommended' => $request->has(key:'isRecommended')
+            'image' => $path . $filename,
+            'isRecommended' => $request->has(key: 'isRecommended')
         ]);
 
         //redirect user
@@ -132,7 +132,7 @@ class ProductController extends Controller
         //delete product
         $product->delete();
 
-        if(File::exists($product->image)){
+        if (File::exists($product->image)) {
             File::delete($product->image);
         }
 
